@@ -1,0 +1,264 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.icon {
+    width: 20px;
+    height: auto;
+}
+
+/* COLORS */
+:root {
+    --primary: #004aad;
+    --accent: #ff7b00;
+    --light: #f9f9f9;
+    --dark: #222;
+}
+
+/* NAVBAR */
+header {
+    background: var(--primary);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.nav-logo {
+    width: 30px;
+    height: auto;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8em;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-content a {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.hero-content span {
+    color: var(--accent);
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: white;
+    color: var(--accent);
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.services h2,
+.about h2,
+.contact h2 {
+    color: var(--primary);
+    margin-bottom: 30px;
+}
+
+/* SERVICES */
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-card {
+    background: var(--light);
+    padding: 25px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.service-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ABOUT */
+.about p {
+    max-width: 700px;
+    margin: auto;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* CONTACT */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: var(--accent);
+}
+
+/* FOOTER */
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--primary);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* TOMBOL WHATSAPP KONTAK */
+.whatsapp-contact {
+    margin-top: 25px;
+}
+
+.btn-wa {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-wa:hover {
+    background: #1ebe5d;
+}
+
+/* FLOATING BUTTON WHATSAPP */
+.wa-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    z-index: 200;
+    transition: transform 0.3s;
+}
+
+.wa-float:hover {
+    transform: scale(1.1);
+}
+
+.wa-float img {
+    width: 35px;
+    height: 35px;
+}
